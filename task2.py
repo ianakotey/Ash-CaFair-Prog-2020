@@ -23,7 +23,7 @@ def main():
         validateNumArgs(argv, 3)
         files = list(map(validateFilePath, argv[1:]))
     else:
-        files = ["../covid_data.csv", "../partial_time_series.csv"]
+        files = ["../Test Data/covid_data.csv", "../Test Data/partial_time_series.csv"]
 
 
     covid = parseVirusData(filepath=files[0])

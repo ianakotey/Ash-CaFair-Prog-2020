@@ -16,7 +16,7 @@ from collections import defaultdict
 '''Requires Python 3.8+'''
 assert version_info >= (3,8,0), 'Please use python 3.8+'
 
-Mode = 'Production'
+Mode = 'Development'
 
 def main():
 
@@ -27,7 +27,7 @@ def main():
 
         files = list(map(validateFilePath, argv[1:]))
     else:
-        files = ["../covid_data.csv", "../population_data.csv"]
+        files = ["../Test Data/covid_data.csv", "../Test Data/population_data.csv"]
 
 
 
@@ -206,3 +206,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    from timeit import repeat
+    print( repeat('main()', repeat=3, number=10) )
